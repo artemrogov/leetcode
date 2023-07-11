@@ -12,6 +12,36 @@ class ListNode {
       ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 
+class ItemList {
+
+    private ListNode first;
+
+    public ItemList() {
+        this.first = null;
+    }
+
+    public void addMultiple(int ...vars){
+        for (int i = 0; i<vars.length; i++){
+            insertFirstItem(i);
+        }
+    }
+    public void insertFirstItem(int value){
+        ListNode nLink = new ListNode(value);
+        nLink.next = first;
+        first = nLink;
+    }
+
+    public List<Integer> toArrayList(){
+        ListNode currentNode = first;
+        List<Integer> data = new ArrayList<>();
+        while (currentNode!=null){
+            data.add(currentNode.val);
+            currentNode = currentNode.next;
+        }
+        return data;
+    }
+}
+
 class Solution {
     public static ListNode reverseList(ListNode head) {
         ListNode prev = null;
@@ -29,6 +59,7 @@ class Solution {
 }
 
 class SolutionDisplayTestCaseUtil{
+
     public static List<Integer> convertToArrayList(ListNode node){
         List<Integer> resultArrList = new ArrayList<>();
         while(node!=null){
@@ -51,5 +82,18 @@ public class ReverseLinkedListMain {
         node.next.next.next = new ListNode(4);
         node.next.next.next.next = new ListNode(5);
         SolutionDisplayTestCaseUtil.show(node);
+
+
+        ItemList itemList = new ItemList();
+        itemList.insertFirstItem(1);
+        itemList.insertFirstItem(2);
+        itemList.insertFirstItem(3);
+        itemList.insertFirstItem(4);
+        itemList.insertFirstItem(5);
+        System.out.println(itemList.toArrayList());
+        System.out.println("multiple values: ");
+        ItemList multipleValues = new ItemList();
+        multipleValues.addMultiple(1,3,4,5,6,7,8);
+        System.out.println(multipleValues.toArrayList());
     }
 }
