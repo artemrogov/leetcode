@@ -1,26 +1,7 @@
 package org.artemrogov.linkedlist;
 
-/**
- * You are given the heads of two sorted linked lists list1 and list2.
- * Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.
- * Return the head of the merged linked list.
- */
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
+import org.artemrogov.data_structure.ListNode;
 
 class Solution {
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
@@ -35,35 +16,35 @@ class Solution {
         ListNode head;
         ListNode temp;
 
-        if (list1.val < list2.val) {
-            temp = head = new ListNode(list1.val);
-            list1 = list1.next;
+        if (list1.getVal() < list2.getVal()) {
+            temp = head = new ListNode(list1.getVal());
+            list1 = list1.getNext();
         } else {
-            temp = head = new ListNode(list2.val);
-            list2 = list2.next;
+            temp = head = new ListNode(list2.getVal());
+            list2 = list2.getNext();
         }
 
         while (list1 != null && list2 != null) {
-            if (list1.val < list2.val) {
-                temp.next = new ListNode(list1.val);
-                list1 = list1.next;
+            if (list1.getVal() < list2.getVal()) {
+                temp.setNext(new ListNode(list1.getVal()));
+                list1 = list1.getNext();
             } else {
-                temp.next = new ListNode(list2.val);
-                list2 = list2.next;
+                temp.setNext(new ListNode(list2.getVal()));
+                list2 = list2.getNext();
             }
-            temp = temp.next;
+            temp = temp.getNext();
         }
 
         while (list1 != null) {
-            temp.next = new ListNode(list1.val);
-            list1 = list1.next;
-            temp = temp.next;
+            temp.setNext(new ListNode(list1.getVal()));
+            list1 = list1.getNext();
+            temp = temp.getNext();
         }
 
         while (list2 != null) {
-            temp.next = new ListNode(list2.val);
-            list2 = list2.next;
-            temp = temp.next;
+            temp.setNext(new ListNode(list2.getVal()));
+            list2 = list2.getNext();
+            temp = temp.getNext();
         }
 
         return head;
@@ -73,18 +54,18 @@ class Solution {
 public class MergeTwoList {
     public static void main(String[] args) {
         ListNode node = new ListNode(1);
-        node.next = new ListNode(2);
-        node.next.next = new ListNode(4);
+        node.setNext(new ListNode(2));
+        node.getNext().setNext(new ListNode(4));
 
         ListNode node1 = new ListNode(1);
-        node1.next = new ListNode(3);
-        node1.next.next = new ListNode(4);
+        node1.setNext(new ListNode(3));
+        node1.getNext().setNext(new ListNode(4));
 
-        ListNode aListResult = Solution.mergeTwoLists(node,node1);
+        ListNode aListResult = Solution.mergeTwoLists(node, node1);
 
-        while(aListResult!=null){
-            System.out.print(aListResult.val + ",");
-            aListResult = aListResult.next;
+        while (aListResult != null) {
+            System.out.print(aListResult.getVal() + ",");
+            aListResult = aListResult.getNext();
         }
     }
 }
