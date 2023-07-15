@@ -1,43 +1,42 @@
 package org.artemrogov.sell_stock;
 
-class Solution {
-    public static int maxProfit(int[] prices) {
-         int profit = 0;
-         int indexBuy = 0;
-         for (int i = 1; i<prices.length; i++){
-             if (prices[indexBuy] > prices[i]){
-                 indexBuy = i;
-             }
-             profit = Math.max(profit,prices[i] - prices[indexBuy]);
-         }
-         return profit;
-    }
-    public static int maxProfit2(int[] prices){
-        int profit = 0;
-        int indexBuy = Integer.MAX_VALUE;
-        for (int price : prices) {
-            indexBuy = Math.min(indexBuy, price);
-            profit = Math.max(profit, price - indexBuy);
-        }
-        return profit;
-    }
-}
 public class SellAppMain {
     public static void main(String[] args) {
+
         int[] solutionTestCase01 = new int[]{7,1,5,3,6,4};
         int[] solutionTestCase02 = new int[]{7,6,4,3,1};
 
-        int result = Solution.maxProfit(solutionTestCase01);
-        System.out.println(result);
+        //task 01:
+        FunctionSellStock sellStockOne = prices -> {
+            int profit = 0;
+            int indexBuy = Integer.MAX_VALUE;
+            for (int price : prices) {
+                indexBuy = Math.min(indexBuy, price);
+                profit = Math.max(profit, price - indexBuy);
+            }
+            return profit;
+        };
 
-        int resultTestCase2 = Solution.maxProfit(solutionTestCase02);
-        System.out.println(resultTestCase2);
+        System.out.println("Solution Sell Stock One Test Case 01: " + sellStockOne.maxProfit(solutionTestCase01));
+        System.out.println("Solution Sell Stock One Test Case 02: " + sellStockOne.maxProfit(solutionTestCase02));
 
-        //solution variant 2:
+        int[] sTask02ValuesTestCase01 = new int[]{1,2,3,4,5};
+        int[] sTask02ValuesTestCase02 = new int[]{7,6,4,3,1};
 
-        int resultSolution2 = Solution.maxProfit2(solutionTestCase01);
-        int resultSolutionTestCase2 = Solution.maxProfit2(solutionTestCase02);
-        System.out.println(resultSolution2);
-        System.out.println(resultSolutionTestCase2);
+        // task 02:
+        FunctionSellStock sellStockTwo = prices -> {
+            int profit = 0;
+            int oldPrices = prices[0];
+            for (int i = 1; i<prices.length; i++){
+                if (prices[i] >= oldPrices) {
+                    profit += prices[i] - oldPrices;
+                }
+                oldPrices = prices[i];
+            }
+            return profit;
+        };
+
+        System.out.println("Solution Sell Stock Two Test Case 01: " + sellStockTwo.maxProfit(sTask02ValuesTestCase01));
+        System.out.println("Solution Sell Stock Two Test Case 02: " + sellStockTwo.maxProfit(sTask02ValuesTestCase02));
     }
 }
