@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0430091b-b3fd-4831-94e5-5c2eef99d906" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/grade/GradleViewerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/grade/util/IdGeneratorUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/thread/ThreadMainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/thread/ThreadMainApp2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/artemrogov/grade/model/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/grade/model/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/artemrogov/grade/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/grade/model/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,20 +51,7 @@
     &quot;last_opened_file_path&quot;: &quot;/home/oem/learn/homework_2-multithreading-&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GradleViewerApplication">
-    <configuration name="AppArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.artemrogov.array.AppArray" />
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.artemrogov.array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ThreadMainApp2">
     <configuration name="GradleViewerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.artemrogov.grade.GradleViewerApplication" />
       <module name="leetcode" />
@@ -102,12 +91,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeAppSortedBST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.artemrogov.binary_tree.TreeAppSortedBST" />
+    <configuration name="ThreadMainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.artemrogov.thread.ThreadMainApp" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.artemrogov.binary_tree.*" />
+          <option name="PATTERN" value="org.artemrogov.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadMainApp2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.artemrogov.thread.ThreadMainApp2" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.artemrogov.thread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadMainApp2" />
+        <item itemvalue="Application.ThreadMainApp" />
         <item itemvalue="Application.GradleViewerApplication" />
         <item itemvalue="Application.SolutionMergeTwoArray" />
         <item itemvalue="Application.SellAppMain" />
-        <item itemvalue="Application.AppArray" />
-        <item itemvalue="Application.TreeAppSortedBST" />
       </list>
     </recent_temporary>
   </component>

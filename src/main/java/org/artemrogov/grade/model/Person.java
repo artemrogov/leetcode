@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Random;
 
 public class Person implements Serializable {
+
+    private static final long serialVersionUID = 305268605565801L;
     private final Long id;
     private String name;
     private Map<Long,Grade> grades = new HashMap<>();

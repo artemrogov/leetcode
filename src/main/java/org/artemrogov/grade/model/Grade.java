@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Random;
 
 public class Grade implements Serializable {
+
+    private static final long serialVersionUID = 30426860556580L;
      private final Long id;
 
      private int value;
