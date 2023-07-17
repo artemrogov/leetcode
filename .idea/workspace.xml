@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0430091b-b3fd-4831-94e5-5c2eef99d906" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/array/FunctionMergeArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/threeding/AppThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/artemrogov/array/SolutionMergeTwoArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/artemrogov/array/SolutionMergeTwoArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,13 +48,39 @@
     &quot;last_opened_file_path&quot;: &quot;/home/oem/learn/homework_2-multithreading-&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.SolutionMergeTwoArray">
+  <component name="RunManager" selected="Application.AppTreadSimple">
     <configuration name="AppArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.artemrogov.array.AppArray" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.artemrogov.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.artemrogov.threeding.AppThread" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.artemrogov.threeding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTreadSimple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.artemrogov.threeding.AppTreadSimple" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.artemrogov.threeding.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,39 +114,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.artemrogov.binary_tree.TreeApp" />
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.artemrogov.binary_tree.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TreeAppSortedBST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.artemrogov.binary_tree.TreeAppSortedBST" />
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.artemrogov.binary_tree.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AppTreadSimple" />
+        <item itemvalue="Application.AppThread" />
         <item itemvalue="Application.SolutionMergeTwoArray" />
         <item itemvalue="Application.SellAppMain" />
         <item itemvalue="Application.AppArray" />
-        <item itemvalue="Application.TreeAppSortedBST" />
-        <item itemvalue="Application.TreeApp" />
       </list>
     </recent_temporary>
   </component>
